@@ -1,0 +1,16 @@
+<p>This is a answer page</p>
+<ul>{% for ansr in ans %}
+<li>{{ ansr.answer }}</li>
+<pre>    Posted By: <b>{{ ansr.answer_by }}</b> </pre>
+{% endfor %}
+</ul>
+
+<br>
+<form action="{% url 'askway:answer' question_id %}" method="post">
+    {% csrf_token %}
+    {{ form1 }}
+    <br>
+  <input type="submit" value="Submit">
+</form>
+<br><br>
+To logout <a href="{% url 'askway:signout'%}">Click Here</a>

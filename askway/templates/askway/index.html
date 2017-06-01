@@ -1,0 +1,9 @@
+<form action="{% url 'askway:log' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <br>
+  <input type="submit" value="Login">
+</form>
+<br><br>
+for signup click here
+<a href="{% url 'askway:signup' %}"> SignUp</a>

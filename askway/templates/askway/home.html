@@ -1,0 +1,8 @@
+<ol>{% for que in ques %}
+<li><a href="{% url 'askway:answer' que.id %}">{{ que.question }}</a></li>
+<pre>    Posted By: <b>{{ que.post_by }}</b></pre>
+{% endfor %}
+</ol>
+<br>
+<a href="{% url 'askway:post_ques'%}">Post Question</a><br><br>
+<h3><a href="{% url 'askway:signout'%}">Logout</a></h3>
